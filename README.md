@@ -31,7 +31,7 @@ Steps for copy c++ codes
    test/main.cpp is an example for you to pratice this tool.
 
 General commands for using the tool (based on the test/main.cpp)
-
+```
  ../cfootrack.py full path ./   [add track code in .cpp files in ./ dir]
  make app                       [compile target system]
  ./app                          [run target system] 
@@ -40,47 +40,46 @@ General commands for using the tool (based on the test/main.cpp)
  cat footrackstat.dat.result    [show the parsed result]
  ../cfootrack.py restore path   [restore the source files]
  ../cfootrack.py clear all      [clear the temporary files of this task]
-
+```
 
 Feature list:
 
-* : Done | S : Scheduled, ongoing | - : Not support 
+D : Done | S : Scheduled, ongoing | U : Not support 
 
 Target Scope Control
 
-* Add function trace for one file
-* Add function trace for all ".cpp" files in one path 
+D Add function trace for one file
+D Add function trace for all ".cpp" files in one path 
 S Add function trace for all files defined in a "list" file 
 S Support an "ignored" file to ignored files as input files
-- Config the program for make target scope into "function" granularity. 
-* 
+U Config the program for make target scope into "function" granularity.  
 
 Performance
 
-* Support max 10000 statistics records which occupies about 80K memory.
-- Support config of the max numbers of statistics record.
-* Very small cpu resource comsuption. (suitable for time critical system)
-- Interface defined as inline function for best performance.
+D Support max 10000 statistics records which occupies about 80K memory.
+U Support config of the max numbers of statistics record.
+D Very small cpu resource comsuption. (suitable for time critical system)
+U Interface defined as inline function for best performance.
 
 Statistics Result
-- Support specify the output file and path
+U Support specify the output file and path
 
 Parse Statistics Result
 
-* Support parse the statistics result to (function, file, line) records.
-- Customize the parsed result format. (show less items for example)  
-* Support filter file which can define some functions. The parsed result will
+D Support parse the statistics result to (function, file, line) records.
+U Customize the parsed result format. (show less items for example)  
+D Support filter file which can define some functions. The parsed result will
   not include records match these functions. (Easiler to read the result) 
 
 Analyze result
 
-- From trace record jump to (file,line) directly in VIM.
+U From trace record jump to (file,line) directly in VIM.
 
 Restore
 
-* Support restore the source files of the project.
-* Clear command to erase all temporary files.
+D Support restore the source files of the project.
+D Clear command to erase all temporary files.
 
 Help
 
-- Completely help document also support --help parameter.
+U Completely help document also support --help parameter.
